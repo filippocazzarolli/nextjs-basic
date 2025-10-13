@@ -1,6 +1,6 @@
 import { Controller, Get, Query } from '@nestjs/common';
 import { ProductService } from './product.service';
-import { Product } from '../entity/product.entity';
+import Product from '../entity/product.entity';
 import { FindProductDto } from './dto/find-product.dto';
 
 @Controller('product')

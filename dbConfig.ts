@@ -9,4 +9,6 @@ export const pgConfig: PostgresConnectionOptions = {
   database: 'test',
   entities: [__dirname + '/**/*.entity{.ts,.js}'],
   synchronize: true,
+  // logging: true, // Enable all logging
+  logging: ['query', 'error', 'schema'],
 };

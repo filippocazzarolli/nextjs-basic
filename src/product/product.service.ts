@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Product } from '../entity/product.entity';
+import Product from '../entity/product.entity';
 import { FindOptionsWhere, ILike, Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { FindProductDto } from './dto/find-product.dto';
@@ -20,6 +20,8 @@ export class ProductService {
       };
     return this.cityRepository.find({
       where: conditions,
+      // relations: ['category'],
+      select: ['id', 'name'],
     });
   }
 }
