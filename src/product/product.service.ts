@@ -20,7 +20,7 @@ export class ProductService {
       };
     return this.cityRepository.find({
       where: conditions,
-      // relations: ['category'],
+      relations: ['category'],
       select: ['id', 'name'],
     });
   }
